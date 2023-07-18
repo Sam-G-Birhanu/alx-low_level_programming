@@ -1,4 +1,6 @@
 #include "main.h"
+/**
+ * main function prints the characters in the function name _putchar **/
 int main(void)
 {
 	_putchar('_');
