@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _islower(int c) - shows 1 if the input is a
+ * _islower - shows 1 if the input is a
  * lowercase character. another cases show 0
  * @c: the character in AsCII mode
  *
