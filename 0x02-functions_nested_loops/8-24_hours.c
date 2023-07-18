@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * jack-bauer - prints the minutes of the day
+ * jack_bauer - prints the minutes of the day
  * Return: no return
  */
 void jack_bauer(void)
@@ -9,11 +9,11 @@ void jack_bauer(void)
 
 	for (a = 0; a <= 2; a++)
 	{
-		for (b = 0; b <= 2; b++)
+		for (b = 0; b <= 9; b++)
 		{
-			for (c = 0; c <= 2; c++)
+			for (c = 0; c <= 5; c++)
 			{
-				for (d = 0; d <= 2; d++)
+				for (d = 0; d <= 9; d++)
 				{
 					if (a >= 2 && b >= 4)
 					{
