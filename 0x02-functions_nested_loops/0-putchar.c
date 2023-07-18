@@ -1,6 +1,8 @@
 #include "main.h"
 /**
- * main function prints the characters in the function name _putchar 
+ * main - entry point
+ * Description: prints _putchar to stdout
+ * Return: always 0
  */
 int main(void)
 {
