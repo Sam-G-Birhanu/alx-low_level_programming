@@ -8,12 +8,13 @@
 
 void print_rev(char *s){
 	int track = 0;
+	int i;
+
 	while(*s >= '\0')
 	{
 		s++;
 		track++;
 	}
-	int i;
 
 	for(i = track; i >= 0 ; i--)
 	{
