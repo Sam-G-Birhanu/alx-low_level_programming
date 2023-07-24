@@ -16,10 +16,12 @@ void print_rev(char *s)
 		s++;
 		track++;
 	}
+	track--;
 
-	for(i = track - 1; i >= 0 ; i--)
+	for(i = track; i >= 0 ; i--)
 	{
 		_putchar(*(s--));
 	}
+	putchar(*(s));
 	_putchar('\n');
 }
