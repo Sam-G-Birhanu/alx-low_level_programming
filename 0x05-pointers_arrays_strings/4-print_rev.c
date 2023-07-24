@@ -17,6 +17,7 @@ void print_rev(char *s)
 		track++;
 	}
 	track--;
+	s--;
 
 	for(i = track + 1; i >= 0 ; i--)
 	{
