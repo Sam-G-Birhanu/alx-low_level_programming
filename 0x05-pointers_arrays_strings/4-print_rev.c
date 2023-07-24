@@ -6,18 +6,19 @@
 *Return void
 */
 
-void print_rev(char *s)
-{
-int track = 0;
-while(*s >= '\0')
-{
-s++;
-track++;
-}
-for(int i = track; i >= 0 ; i--)
-{
-putchar(*s--);
-}
+void print_rev(char *s){
+	int track = 0;
+	while(*s >= '\0')
+	{
+		s++;
+		track++;
+	}
+	int i;
+
+	for(i = track; i >= 0 ; i--)
+	{
+		putchar(*s--);
+	}
 }
 
 
