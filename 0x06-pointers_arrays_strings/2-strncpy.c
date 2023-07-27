@@ -9,23 +9,19 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	int count = 0, count2 = 0;
+	int count = 0;
 
-	while (count2 >= 0 && count2 < n)
+	while (count < n)
 	{
-		*(dest + count) = *(src + count2);
-		if (*(src + count2) == '\0' && *(dest + count) != '\0')
-		{
-			*(dest + count) = '\0';
-			count++;
-			continue;
-		}
-		else if (*(dest + count) == '\0')
-		{
-			return (dest);
-		}
+		*(dest + count) = *(src + count);
+		if (*(src + count) == '\0')
+			break;
 		count++;
-		count2++;
+	}
+	while (count < n)
+	{
+		*(dest + count) = '\0';
+		count++;
 	}
 	return (dest);
 }
