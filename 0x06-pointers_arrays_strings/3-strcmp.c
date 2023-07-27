@@ -21,7 +21,6 @@ int _strcmp(char *s1, char *s2)
 		else
 		{
 			value = 0;
-			printf("wrong");
 			tf = 0;
 			break;
 		}
@@ -32,7 +31,6 @@ int _strcmp(char *s1, char *s2)
 	}
 	else
 	{
-		printf("hi");
 		value = 0;
 	}
 	return value;
