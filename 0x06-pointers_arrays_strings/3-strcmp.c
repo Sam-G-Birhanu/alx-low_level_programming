@@ -15,23 +15,23 @@ int _strcmp(char *s1, char *s2)
 	{
 		if (*(s1 + i) == *(s2 + i))
 		{
-			value = 1;
+			value = *(s1 + i) - *(s2 + i);
 			i++;
 		}
 		else
 		{
-			value = 0;
+			value = *(s1 + i) - *(s2 + i);
 			tf = 0;
 			break;
 		}
 	}
 	if (*(s2 + i + 1) != '\0' && *(s1 + i + 1) != '\0' && tf == 1)
 	{
-		value = 1;
+		value = *(s1 + i) - *(s2 + i);
 	}
 	else
 	{
-		value = 0;
+		value = *(s1 + i) - *(s2 + i);
 	}
 	return (value);
 }
