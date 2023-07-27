@@ -10,23 +10,20 @@
 char *_strncpy(char *dest, char *src, int n)
 {
 	int count = 0, count2 = 0;
-
+	
 	while (count2 >= 0)
 	{
 		*(dest + count) = *(src + count2);
 		if (*(src + count2) == '\0' && *(dest + count) != '\0' )
 		{
 			*(dest + count) = '\0';
-					    printf("hi");
-					    count++;
-
+			count++;
 			continue;
 		}
 		else if (*(dest + count) == '\0')
 		{
-		    printf("hi");
-return dest;
-}
+			return dest;
+		}
 		count++;
 		count2++;
 	}
