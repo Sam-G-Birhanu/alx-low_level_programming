@@ -1,43 +1,28 @@
 #include "main.h"
 
 /**
- * _sqrt_recursion - this function finds the square root of a given number
- * sqrtRecursiveHelper - finds square root
- * @low: represents the lower half
- * @high: represents the highes limit
- * @n: this variable represents the number in the square root
- * Return: this function returns an int
+ * _sqrt_recursion - main funct
+ * @n: int n
+ * Return: int
  */
-
-int sqrtRecursiveHelper(int n, int low, int high)
-{
-	int mid;
-	int square;
-
-	if (low > high)
-	{
-		return (-1);
-	}
-	mid = low + (high - low) / 2;
-	square = mid * mid;
-	if (square == n)
-	{
-		return (mid);
-	}
-	else if (square < n)
-	{
-		return (sqrtRecursiveHelper(n, mid + 1, high));
-	}
-	else
-	{
-		return (sqrtRecursiveHelper(n, low, mid - 1));
-	}
-}
 int _sqrt_recursion(int n)
 {
+	return (_sqrt(n, 1));
+}
+
+/**
+ * _sqrt - _sqrt_recursion
+ * @n: integer paramtr
+ * @i: integer parameter
+ * Return: sqrt
+ */
+int _sqrt(int n, int i)
+{
 	if (n < 0)
-	{
 		return (-1);
-	}
-	return (sqrtRecursiveHelper(n, 0, n));
+	if ((i * i) > n)
+		return (-1);
+	if (i * i == n)
+		return (i);
+	return (_sqrt(n, i + 1));
 }
