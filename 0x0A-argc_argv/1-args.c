@@ -6,8 +6,10 @@
  * @argV: list of strings
  * Return: returns  0 always
 */
-int main(int argC __attribute__((unused)), char *argV[])
+
+
+int main(int argC, char *argV[] __attribute__((unused)))
 {
-	printf("%s\n", argV[0]);
+	printf("%d\n", argC - 1);
 	return (0);
 }
