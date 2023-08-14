@@ -7,8 +7,6 @@
 
 int main(void)
 {
-	char filename[];
-
 	printf("%s \n", __FILE__);
 	return (0);
 }
