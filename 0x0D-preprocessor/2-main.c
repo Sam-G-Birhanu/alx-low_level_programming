@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-void main(void)
+void filename (void)
 {
 	char *filename = __FILE__ ;
 
