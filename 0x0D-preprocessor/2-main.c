@@ -3,12 +3,16 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+/**
+ * main - prints the filename
+ * Return (0);
+ **/
 
-void main(void)
+int main(void)
 {
-	    char filename[] = __FILE__;
-	        printf("%s\n", filename);
-		    return;
+	char filename[] = __FILE__;
+	printf("%s\n", filename);
+	return (0);
 }
 
 #endif
