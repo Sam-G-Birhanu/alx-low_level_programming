@@ -1,4 +1,4 @@
 #ifndef FUNCTION_LIKE_SUM
 #define FUNCTION_LIKE_SUM
-#define SUM(x , y) ((x) + (y))
+#define SUM(x,y) ((x) + (y))
 #endif
