@@ -1,28 +1,31 @@
-#include "function_pointers.h"
+#include "variadic_functions.h"
 
 /**
- * int_index - searches for an integer
- * @array: input integer array.
- * @size: size of the array.
- * @cmp: pointer to the function to be used
- * to compare values.
- * 
- * Return: index of the first eement for which the cmp
- * function does not return 0. If no elements matches,
- * return -1. If size <= 0, return -1.
+ * print_strings - prints strings.
+ * @separator: string to be printed between the strings.
+ * @n: number of strings passed to the function.
+ * Return: no return.
  **/
-int int_index(int *array, int size, int (*cmp)(int))
+void print_strings(const char *separator, const unsigned int n, ...)
 {
-	int i;
-	
-	if (array && cmp)
-	{
-		if (size <= 0)
-			return (-1);
+	va_list valist;
+	unsigned int i;
+	char *str;
 
-		for (i = 0; i < size; i++)
-			if (cmp(array[i]))
-				return (i);
+	va_start(valist, n);
+
+	for (i = 0; i < n; i++)
+	{
+		str = va_arg(valist, char *);
+		if (str)
+			printf("%s", str);
+		else
+			printf("(nil)");
+
+		if (i < n - 1)
+			if (separator)
+				printf("%s", separator);
 	}
-	return (-1);
+	printf("\n");
+	va_end(valist);
 }
