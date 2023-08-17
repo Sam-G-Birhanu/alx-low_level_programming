@@ -1,5 +1,5 @@
 #ifndef _FUN_PTR
-#define _FUN_PTR_
+#define _FUN_PTR
 
 #include <stdlib.h>
 
