@@ -1,21 +1,15 @@
-section .data
-    msg db "Hello, Holberton", 0 ; Define a null-terminated string
+SECTION .data
+msg:	db "Hello, Holberton", 0
+fmt:	db "%s", 10, 0
 
-section .text
-    global main
-    extern printf
-
+	SECTION .text
+	extern printf
+	global main
 main:
-    ; Load arguments for printf
-    mov esi, msg    ; Address of the message
-    mov edi, fmt    ; Address of the format string
+	mov esi, msg
+	mov edi, fmt
+	mov eax, 0
+	call printf
 
-    ; Call printf
-    call printf
-
-    ; Exit the program
-    mov eax, 0      ; Set return value to 0
-    ret
-
-section .data
-    fmt db "%s", 10, 0 ; Define a format string with a newline and null terminator
+	mov eax, 0
+	ret
