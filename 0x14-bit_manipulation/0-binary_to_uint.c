@@ -1,4 +1,6 @@
 #include "main.h"
+#include <string.h>
+
 /**
  * binary_to_uint - takes a number and turns it into its binary form
  * @b: a paremeter that takes a string to be converted
@@ -9,11 +11,11 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int i;
 	unsigned int sum = 0;
 
-	for (i = _strlen(b) - 1; i != (unsigned int)-1; i--)
+	for (i = strlen(b) - 1; i != (unsigned int)-1; i--)
 	{
 		if (b[i] == '1')
 		{
-			sum += 1 << (_strlen(b) - 1 - i);
+			sum += 1 << (strlen(b) - 1 - i);
 		}
 		else if (b[i] != '0')
 		{
