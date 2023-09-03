@@ -6,16 +6,19 @@
  **/
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int i = _strlen(*b);
-	unsigned int sum = 0;
-	for(i = _strlen(*b) - 1;i >= 0;i--)
-	{
-		while(*b != '\0')
-		{
-			unsigned int num;
-			num = (unsigned int)b;
-			sum += num * (2 ** i);
-			b--;
-		}
-	}
+    unsigned int i;
+    unsigned int sum = 0;
+
+    for (i = _strlen(b) - 1; i != (unsigned int)-1; i--) 
+    {
+        if (b[i] == '1')
+        {
+            sum += 1 << (_strlen(b) - 1 - i);
+        }
+        else if (b[i] != '0')
+        {
+            return 0;
+        }
+    }
+ return sum;
 }
