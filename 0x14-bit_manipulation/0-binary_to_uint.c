@@ -1,5 +1,5 @@
 #include "main.h"
-#include <string.h>
+#include "_strlen.c"
 
 /**
  * binary_to_uint - takes a number and turns it into its binary form
