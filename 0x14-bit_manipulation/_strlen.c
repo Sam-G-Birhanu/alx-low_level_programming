@@ -5,7 +5,7 @@
  * Return: int type containing the length
  */
 
-int _strlen(char *s)
+int _strlen(const char *s)
 {
 	int leng = 0;
 
