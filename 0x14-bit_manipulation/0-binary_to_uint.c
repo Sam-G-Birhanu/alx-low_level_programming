@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * binary_to_uint - a function that takes a number and turns it into its binary form 
+ * binary_to_uint - takes a number and turns it into its binary form 
  * @b: a paremeter that takes a string to be converted
  * Return: the converted number, or 0
  **/
