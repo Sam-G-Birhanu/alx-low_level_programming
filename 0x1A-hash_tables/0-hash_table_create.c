@@ -1,7 +1,13 @@
 #include "hash_tables.h"
+/**
+ * hash_table_create - a function that creates a hash table
+ * size: size of the table
+ * Return: returns pointer to the table
+ */
+
 hash_table_t *hash_table_create(unsigned long int size)
 {
-    unsigned long int i;
+	unsigned long int i;
     hash_table_t *table = (hash_table_t *)malloc(sizeof(hash_table_t));
     if (table == NULL)
     {
