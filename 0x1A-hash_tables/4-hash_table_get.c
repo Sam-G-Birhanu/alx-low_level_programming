@@ -9,7 +9,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
   if (current == NULL || current->value == NULL)
   return NULL;
   else
-  return (current->value)
+  return (current->value);
   
 }
 else
