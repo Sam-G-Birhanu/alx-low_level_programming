@@ -1,23 +1,35 @@
 #include "hash_tables.h"
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
+    {
     if(key != NULL)
     {
-        const unsigned char* k = (const unsigned char*)key;
-       unsigned long int index = key_index(k, ht->size);
+       unsigned long int index = key_index(key, ht->size);
        if (index > ht->size)
        {
            return 0;
        }
        if (ht->array[index] == NULL)
        {
-           array[index] = value;
-           return 1;
+           hash_node_t* new_node = (hash_node_t*) malloc(sizeof(hash_node_t));
+           if(new_node == NULL)
+            return 0;
+        new_node->key = strdup(key);
+        new_node->value = strdup(value);
+        new_node->next = NULL;
+        ht->array[index] = new_node;
+        return 1;
        }
        else
        {
-           *array[index]->next = value;
-           return 1;
+           hash_node_t* current = ht->array[index];
+           while (current != NULL){
+               if(strcmp(current->key, key))
+               {
+                   
+               }
+           }
+           
        }
        }
     else
