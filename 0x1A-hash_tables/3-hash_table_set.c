@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-    if(key != NULL)
+    if(key != NULL && ht != NULL)
     {
         
        unsigned long int index = key_index((const unsigned char*)key, ht->size);
