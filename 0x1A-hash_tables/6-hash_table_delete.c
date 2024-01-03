@@ -2,13 +2,13 @@
 
 void hash_table_delete(hash_table_t *ht)
 {
+    hash_node_t *current;
+    hash_node_t *next;
     unsigned long int i;
     if (ht == NULL)
     {
         return;
     }
-
-    hash_node_t *current, *next;
 
     for (i = 0; i < ht->size; i++)
     {
