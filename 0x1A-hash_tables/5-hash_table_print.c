@@ -29,9 +29,10 @@ void hash_table_print(const hash_table_t *ht)
 {
     if (ht != NULL)
     {
+        long unsigned int i;
         printf("{");
 
-        for (long unsigned int i = 0; i < ht->size; i++)
+        for (i = 0; i < ht->size; i++)
         {
             hash_node_t *current = ht->array[i];
 
