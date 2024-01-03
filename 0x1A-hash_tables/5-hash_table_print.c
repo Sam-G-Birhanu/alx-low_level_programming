@@ -17,10 +17,10 @@ void hash_table_print(const hash_table_t *ht)
                 printf("'%s': '%s'",current->key, current->value);
             }
         }
-        if (i < size){
+        if (i < ht->size){
             printf(",");
     }
-        if (i == size){
+        if (i == ht->size){
             printf("}");
     }
         
