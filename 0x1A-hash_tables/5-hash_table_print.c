@@ -9,12 +9,12 @@
         while(i < ht->size)
         {
             hash_node_t* current = ht->array[i];
-            printf("{%s: %s",current->key, current->value);
+            printf("{%s:" + " %s",current->key, current->value);
     
             while(current->next != NULL)
             {
                 current = current->next;
-                printf(", %s: %s",current->key, current->value);
+                printf(", %s:"+" %s",current->key, current->value);
             }
             printf(", ");
             i++;
