@@ -9,8 +9,16 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
   if (current == NULL || current->value == NULL)
   return NULL;
   else
-  return (current->value);
-  
+    while(current != NULL)
+      {
+        if(strcmp(current->key, key) == 0)
+        {
+          return (current->value);
+        }
+        else
+          current = next;
+      }
+  return NULL;
 }
 else
 {
