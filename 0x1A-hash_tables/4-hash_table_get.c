@@ -16,7 +16,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
           return (current->value);
         }
         else
-          current = next;
+          current = current->next;
       }
   return NULL;
 }
