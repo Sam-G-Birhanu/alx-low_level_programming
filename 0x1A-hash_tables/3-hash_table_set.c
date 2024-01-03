@@ -3,7 +3,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
     if(key != NULL)
     {
-        const unsigned char* k = key;
+        const unsigned char* k = (const unsigned char*)key;
        unsigned long int index = key_index(k, ht->size);
        if (index > ht->size)
        {
