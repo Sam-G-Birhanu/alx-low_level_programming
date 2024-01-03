@@ -1,7 +1,15 @@
 #include "hash_tables.h"
+/**
+ * hash_table_t - a function that sets the table
+ * @ht: table
+ * @key: key to acess value
+ * @value: value to be stored
+ * Return: returns a pointer
+ * */
+
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-    if(key != NULL && ht != NULL)
+	if(key != NULL && ht != NULL)
     {
         
        unsigned long int index = key_index((const unsigned char*)key, ht->size);
