@@ -23,7 +23,8 @@ int linear_search(int *array, size_t size, int value)
         }
         else
         {
-            printf("Value checked array[%d] = [%d]\n", i, *array);
+            printf("Value checked array[%d] = [%d]", i, *array);
+            printf("\n");
             array++;
         }
     }
