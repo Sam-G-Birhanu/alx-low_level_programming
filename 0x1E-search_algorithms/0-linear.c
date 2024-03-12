@@ -3,8 +3,8 @@ int linear_search(int *array, size_t size, int value)
 {
     /**
      * linear_search - a function that performs linear linear_search
-     * size - a parameter that stores the size of the array
-     * value: the value to be searched
+     * @size - a parameter that stores the size of the array
+     * @value: the value to be searched
      * Return: returns -1 if value not found, index if found
      **/
      
