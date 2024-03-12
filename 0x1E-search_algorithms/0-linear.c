@@ -23,12 +23,9 @@ int linear_search(int *array, size_t size, int value)
 			found = true;
 			return (i);
 		}
-		else
-		{
 			printf("Value checked array[%d] = [%d]", i, *array);
 			printf("\n");
 			array++;
-		}
 	}
 	if (!found)
 		return (-1);
